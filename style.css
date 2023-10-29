@@ -1,0 +1,157 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 100;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: #1B2735;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --white: #fff;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-space {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+nav {
+  padding: 1rem 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.titleLinks {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  text-align: left;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  min-height: 70vh;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+.project-item {
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 12rem;
+  min-width: 18rem;
+}
+
+.proyectURL {
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 1rem;
+  transition: transform .5s;
+}
+
+.proyectURL:hover {
+  transform: scale(1.07);
+}
+
+
+.experience-container {
+  display: flex;
+  align-items: start;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 10px;
+  min-height: 36rem;
+}
+
+.experienceLink {
+  text-decoration: none;
+  color: var(--white);
+  width: 20%;
+  transition: transform .5s;
+}
+
+.experienceLink:hover {
+  transform: scale(1.07);
+}
+
+.personalImg {
+  border-radius: 100%;
+  height: 10%;
+  width: 10%;
+}
+
+.linksContainer {
+  width: 10%;
+}
+
+.linkslImg,
+.logoImg,
+.proyectImg {
+  width: 5rem;
+}
+
