@@ -4,7 +4,7 @@ const personalData = {
   nombre: 'Jorge Gravel',
   puestoTrabajo: 'Desarrollador Web',
   descripcion: '¡Hola! Soy un desarrollador web.',
-  imagenURL: '/assets/jorge.jpg',
+  imagenURL: 'https://fyra.es/imagen.jpg',
   githubURL: 'https://github.com/JorgeGG55',
   linkedinURL: 'https://www.linkedin.com/in/jorge-gravel'
 };
@@ -202,7 +202,7 @@ const proyectosData = [
   },
   {
     nombre: 'Fyra.',
-    imagenURL: '/assets/fyra.png',
+    imagenURL: 'https://i.ibb.co/pRcHcXg/fyra.png',
     paginaURL: 'https://fyra.es/'
   },
   {
