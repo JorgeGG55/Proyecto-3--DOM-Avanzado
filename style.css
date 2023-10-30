@@ -42,6 +42,10 @@ body {
   align-items: center;
 }
 
+.align-start {
+  align-items: start; 
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -51,13 +55,46 @@ h2 {
   margin: 0;
 }
 
+.burger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+.burger-line {
+  width: 50px;
+  height: 5px;
+  background: var(--white);
+  margin: 10px 0;
+}
+
+.show-nav {
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 24px;
+  right: 24px;
+  border-radius: 10px;
+  background: #fff;
+  z-index: 1;
+}
+
 nav {
   padding: 1rem 2rem;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+.experience-list {
+  float: left;
+  width: 18%;
 }
 
 .titleLinks {
@@ -70,32 +107,20 @@ ul {
 
 
 .home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 70vh;
-  text-align: left;
 }
 
 .projects-container {
-  display: flex;
-  justify-content: center;
   gap: 5rem;
   width: 100%;
   min-height: 70vh;
-  align-items: center;
   padding: 2rem;
   font-size: 1rem;
 }
 
 .project-item {
-  align-items: center;
   border-radius: 10px;
   border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-height: 12rem;
   min-width: 18rem;
 }
@@ -104,24 +129,15 @@ ul {
   text-decoration: none;
   color: var(--white);
   border-radius: 1rem;
-  transition: transform .5s;
-}
-
-.proyectURL:hover {
-  transform: scale(1.07);
 }
 
 
 .experience-container {
-  display: flex;
-  align-items: start;
   padding: 2rem;
   gap: 1rem;
 }
 
 .experience-item {
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
   border: 1px solid;
   border-radius: 10px;
@@ -132,13 +148,7 @@ ul {
   text-decoration: none;
   color: var(--white);
   width: 20%;
-  transition: transform .5s;
 }
-
-.experienceLink:hover {
-  transform: scale(1.07);
-}
-
 .personalImg {
   border-radius: 100%;
   height: 10%;
@@ -153,5 +163,50 @@ ul {
 .logoImg,
 .proyectImg {
   width: 5rem;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  nav {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block; /* Muestra el botón de hamburguesa en pantallas más pequeñas */
+  }
+
+  .personalImg {
+      width: 50%;
+  }
+
+  .linksContainer {
+      width: 100%;
+      gap: 1rem;
+  }
+
+  .justify-space {
+    justify-content: center;
+  }
+
+  .experience-item {
+    margin-bottom: 1rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .experience-group {
+    flex-direction: column;
+  }
+
+  .experience-list {
+    width: 100%;
+  }
+
+  .titleLinks {
+    color: #1B2735
+  }
 }
 

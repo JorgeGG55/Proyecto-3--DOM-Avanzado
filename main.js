@@ -1,5 +1,19 @@
 import './style.css';
 
+const burgerBtn = document.querySelector('.burger-btn');
+const nav = document.querySelector('nav');
+
+burgerBtn.addEventListener('click', () => {
+  nav.classList.toggle('show-nav');
+});
+
+const navLinks = document.querySelectorAll('.titleLinks');
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('show-nav');
+  });
+});
+
 const personalData = {
   nombre: 'Jorge Gravel',
   puestoTrabajo: 'Desarrollador Web',
@@ -14,7 +28,7 @@ function renderHome() {
   app.innerHTML = '';
 
   const homeContainer = document.createElement('div');
-  homeContainer.classList.add('home-container');
+  homeContainer.className = 'home-container d-flex align-center justify-center flex-column';
 
   const imagen = document.createElement('img');
   imagen.src = personalData.imagenURL;
@@ -139,7 +153,10 @@ function renderExperience() {
   app.innerHTML = '';
 
   const experienceContainer = document.createElement('div');
-  experienceContainer.classList.add('experience-container');
+  experienceContainer.className = 'experience-container d-flex align-start';
+
+  const ul = document.createElement('ul');
+  ul.className = 'experience-group d-flex justify-space';
 
   experienceData.forEach((experience, index) => {
     const empresaLink = document.createElement('a');
@@ -148,7 +165,7 @@ function renderExperience() {
     empresaLink.target = '_blank';
 
     const experienceItem = document.createElement('div');
-    experienceItem.classList.add('experience-item');
+    experienceItem.className = 'experience-item d-flex flex-column';
 
     const logo = document.createElement('img');
     logo.src = experience.logo;
@@ -181,8 +198,14 @@ function renderExperience() {
     experienceItem.appendChild(responsabilidadesList);
 
     empresaLink.appendChild(experienceItem);
-    experienceContainer.appendChild(empresaLink);
+
+    const li = document.createElement('li');
+    li.className = 'experience-list';
+    li.appendChild(empresaLink);
+    ul.appendChild(li);
   });
+
+  experienceContainer.appendChild(ul);
 
   app.appendChild(experienceContainer);
 }
@@ -224,11 +247,11 @@ function renderProjects() {
   app.innerHTML = '';
 
   const projectsContainer = document.createElement('div');
-  projectsContainer.classList.add('projects-container');
+  projectsContainer.className = 'projects-container d-flex align-center justify-center';
 
   proyectosData.forEach((proyecto, index) => {
     const projectItem = document.createElement('div');
-    projectItem.classList.add('project-item');
+    projectItem.className = 'project-item d-flex align-center justify-center flex-column';
 
     const imagen = document.createElement('img');
     imagen.src = proyecto.imagenURL;
